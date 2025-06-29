@@ -1,5 +1,8 @@
 {
   "name": "clerk-auth-react-tailwind",
+  "author": "RJ Leyva",
+  "description": "A learning project focused on implementing Clerk authentication and styling with TailwindCSS in React",
+  "license": "MIT",
   "private": true,
   "version": "0.0.0",
   "type": "module",
