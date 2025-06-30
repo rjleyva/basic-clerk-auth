@@ -11,7 +11,10 @@ const Steps = () => {
           {processTitle}
         </h2>
 
-        <ol className="steps list-decimal list-inside">
+        <ol
+          className="steps list-decimal list-inside"
+          aria-label="Onboarding steps"
+        >
           <li className="step step-primary" aria-current="step">
             Register
           </li>
@@ -19,17 +22,6 @@ const Steps = () => {
           <li className="step">Purchase</li>
           <li className="step">Receive Product</li>
         </ol>
-
-        <p className="text-center mx-auto my-4 font-medium text-gray-500 mt-14">
-          Secured by <span className="sr-only">authentication provider</span>{' '}
-          <a
-            href="https://clerk.com/"
-            target="_blank"
-            className="text-cyan-700"
-          >
-            Clerk
-          </a>
-        </p>
       </div>
     </section>
   );
