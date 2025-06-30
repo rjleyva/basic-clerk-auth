@@ -1,4 +1,5 @@
 import App from './app.tsx';
+import Footer from './components/Footer.tsx';
 import NavBar from './components/NavBar.tsx';
 
 const routes = [
@@ -8,6 +9,7 @@ const routes = [
       <>
         <NavBar />
         <App />
+        <Footer />
       </>
     )
   }
