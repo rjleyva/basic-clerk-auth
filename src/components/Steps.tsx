@@ -20,9 +20,15 @@ const Steps = () => {
           <li className="step">Receive Product</li>
         </ol>
 
-        <p className="text-center mx-auto my-4 font-medium">
-          Powered by <span className="sr-only">authentication provider</span>{' '}
-          Clerk
+        <p className="text-center mx-auto my-4 font-medium text-gray-500 mt-14">
+          Secured by <span className="sr-only">authentication provider</span>{' '}
+          <a
+            href="https://clerk.com/"
+            target="_blank"
+            className="text-cyan-700"
+          >
+            Clerk
+          </a>
         </p>
       </div>
     </section>
