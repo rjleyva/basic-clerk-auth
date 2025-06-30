@@ -1,9 +1,12 @@
 # Basic Clerk Auth + Tailwind + daisyUI in React 🔐
 
-This project is my personal approach to learning how to implement authentication using Clerk, form handling with React Hook Form and Zod, and styling React applications with Tailwind CSS and daisyUI.
+This project represents my personal journey in learning modern frontend tools. So far, I’ve explored and integrated the following:
 
-## 🚧 TODO
+- [x] 🔑 Clerk – Authentication made easy
+- [x] 🎨 Tailwind CSS – Utility-first styling
+- [x] 🌼 daisyUI – Beautiful component library for Tailwind
 
-- [ ] Set up React Hook Form for managing form state
-- [ ] Use Zod for schema-based form validation
-- [ ] Add theme toggle (dark/light mode) using Tailwind CSS and daisyUI utilities
+## Soon
+
+- [ ] 🧩 React Hook Form – Efficient form handling (planned for future projects)
+- [ ] 🛡️ Zod – Type-safe validation for forms
