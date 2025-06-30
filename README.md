@@ -6,6 +6,8 @@ This project represents my personal journey in learning modern frontend tools. S
 - [x] 🎨 Tailwind CSS – Utility-first styling
 - [x] 🌼 daisyUI – Beautiful component library for Tailwind
 
+![clerk ui screenshot]('./images/basic-clerk-auth.webp')
+
 ## Soon
 
 - [ ] 🧩 React Hook Form – Efficient form handling (planned for future projects)
