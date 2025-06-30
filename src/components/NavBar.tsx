@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 
-const home: string = 'Home';
+const home: string = 'Logo';
 
 const NavBar = () => {
   return (
