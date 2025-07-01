@@ -7,13 +7,13 @@ const routes = [
     path: '/',
     element: (
       <>
-        <NavBar />
+        <NavBar home="The Kapital" />
         <App />
         <Footer
-          srOnlyText="Secured by Clerk, an authentication provider"
-          messagePrefix="Secured by"
-          linkLabel="Clerk"
-          linkHref="https://clerk.com/"
+          footerScreenReaderText="Secured by Clerk, an authentication provider"
+          footerMessagePrefix="Secured by"
+          footerLinkLabel="Clerk"
+          footerLinkHref="https://clerk.com/"
         />
       </>
     )
