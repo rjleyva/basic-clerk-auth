@@ -1,4 +1,5 @@
 import type { JSX } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
 interface NavBarProps {
@@ -17,4 +18,4 @@ const NavBar = ({ home }: NavBarProps): JSX.Element => {
   );
 };
 
-export default NavBar;
+export default React.memo(NavBar);
