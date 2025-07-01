@@ -9,7 +9,12 @@ const routes = [
       <>
         <NavBar />
         <App />
-        <Footer />
+        <Footer
+          srOnlyText="Secured by Clerk, an authentication provider"
+          messagePrefix="Secured by"
+          linkLabel="Clerk"
+          linkHref="https://clerk.com/"
+        />
       </>
     )
   }
