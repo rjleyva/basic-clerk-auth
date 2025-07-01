@@ -11,13 +11,13 @@ interface StepsProps {
   currentStepIndex?: number;
 }
 
-const defaultHeading = '4 Easy Steps to Get You Started';
+const defaultHeading = 'Your Starter Quest: 4 Quick Steps';
 
 const defaultSteps: StepItem[] = [
-  { id: 'register', label: 'Register' },
-  { id: 'choose-plan', label: 'Choose Plan' },
-  { id: 'purchase', label: 'Purchase' },
-  { id: 'receive-product', label: 'Receive Product' }
+  { id: 'register', label: 'Join' },
+  { id: 'choose-plan', label: 'Loadout' },
+  { id: 'purchase', label: 'Unlock' },
+  { id: 'receive-product', label: 'Claim' }
 ];
 
 const Steps = ({
@@ -34,17 +34,18 @@ const Steps = ({
         >
           {heading}
         </h2>
-        <ul className="steps" aria-label="Onboarding steps">
-          {steps.map(({ id, label }, index) => (
-            <li
-              key={id}
-              className={`step ${index <= currentStepIndex ? 'step-primary' : ''}`}
-              aria-current={index === currentStepIndex ? 'step' : undefined}
-            >
-              {label}
-            </li>
-          ))}
-        </ul>
+        <div className="flex justify-center">
+          <ul className="steps">
+            {steps.map((step, index) => (
+              <li
+                key={step.id}
+                className={`step ${index <= currentStepIndex ? 'step-primary' : ''}`}
+              >
+                {step.label}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
