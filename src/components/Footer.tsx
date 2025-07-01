@@ -1,19 +1,31 @@
-const Footer = () => {
+import type { JSX } from 'react';
+
+interface FooterProps {
+  footerScreenReaderText: string;
+  footerMessagePrefix: string;
+  footerLinkLabel: string;
+  footerLinkHref: string;
+}
+
+const Footer = ({
+  footerScreenReaderText,
+  footerMessagePrefix,
+  footerLinkLabel,
+  footerLinkHref
+}: FooterProps): JSX.Element => {
   return (
     <footer>
-      <p className="text-center mx-auto my-4 font-medium text-gray-500 mt-14">
-        <span className="sr-only">
-          Secured by Clerk, an authentication provider
-        </span>
-        <span aria-hidden="true">
-          Secured by{' '}
+      <p className="text-center mx-auto my-4 font-medium mt-14">
+        <span className="sr-only">{footerScreenReaderText}</span>
+        <span>
+          {footerMessagePrefix}{' '}
           <a
-            href="https://clerk.com/"
+            href={footerLinkHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyan-700"
+            className="text-orange-500"
           >
-            Clerk
+            {footerLinkLabel}
           </a>
         </span>
       </p>
