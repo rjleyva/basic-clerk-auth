@@ -1,37 +1,36 @@
-import js from '@eslint/js';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import js from '@eslint/js'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { globalIgnores } from 'eslint/config'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
-export default tseslint.config(
-  { ignores: ['dist'] },
+export default tseslint.config([
+  globalIgnores(['dist']),
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2024,
+      sourceType: 'module',
+      parser: tseslint.parser,
+      parserOptions: {
+        project: './tsconfig.lint.json',
+        tsconfigRootDir: process.cwd()
+      },
       globals: globals.browser
     },
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
-    },
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommendedTypeChecked,
+      reactHooks.configs['recommended-latest'],
+      reactRefresh.configs.vite
+    ],
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-empty-object-type': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_'
-        }
-      ],
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true }
-      ]
+      '@typescript-eslint/no-unused-vars': ['error'],
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/explicit-function-return-type': 'warn',
+      '@typescript-eslint/no-misused-promises': 'error'
     }
   }
-);
+])
