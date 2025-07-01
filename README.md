@@ -11,8 +11,8 @@ This project represents my personal journey in learning modern frontend tools. S
 ## 📝 Todo
 
 - [ ] ⚡ Improve React performance and component optimization
-- [ ] ♿ Address accessibility issues (a11y)
-- [ ] 🏗️ Refactor to use proper semantic HTML structure for clarity and SEO
+- [x] ♿ Address accessibility issues (a11y)
+- [x] 🏗️ Refactor to use proper semantic HTML structure for clarity and SEO
 
 ## 🔮 Soon
 
