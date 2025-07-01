@@ -1,6 +1,30 @@
-const processTitle: string = 'Just 4 Easy Steps to Get You Started';
+import type { JSX } from 'react';
 
-const Steps = () => {
+interface StepItem {
+  id: string;
+  label: string;
+}
+
+interface StepsProps {
+  heading?: string;
+  steps?: StepItem[];
+  currentStepIndex?: number;
+}
+
+const defaultHeading = '4 Easy Steps to Get You Started';
+
+const defaultSteps: StepItem[] = [
+  { id: 'register', label: 'Register' },
+  { id: 'choose-plan', label: 'Choose Plan' },
+  { id: 'purchase', label: 'Purchase' },
+  { id: 'receive-product', label: 'Receive Product' }
+];
+
+const Steps = ({
+  heading = defaultHeading,
+  steps = defaultSteps,
+  currentStepIndex = 1
+}: StepsProps): JSX.Element => {
   return (
     <section aria-labelledby="steps-heading" className="py-8">
       <div className="max-w-xl mx-auto p-4 items-center">
@@ -8,20 +32,19 @@ const Steps = () => {
           id="steps-heading"
           className="text-lg text-center font-semibold mb-4"
         >
-          {processTitle}
+          {heading}
         </h2>
-
-        <ol
-          className="steps list-decimal list-inside"
-          aria-label="Onboarding steps"
-        >
-          <li className="step step-primary" aria-current="step">
-            Register
-          </li>
-          <li className="step step-primary">Choose plan</li>
-          <li className="step">Purchase</li>
-          <li className="step">Receive Product</li>
-        </ol>
+        <ul className="steps" aria-label="Onboarding steps">
+          {steps.map(({ id, label }, index) => (
+            <li
+              key={id}
+              className={`step ${index <= currentStepIndex ? 'step-primary' : ''}`}
+              aria-current={index === currentStepIndex ? 'step' : undefined}
+            >
+              {label}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
