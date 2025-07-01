@@ -2,3 +2,24 @@
 @plugin 'daisyui' {
   themes: abyss --default;
 }
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvitica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -mox-osx-font-smoothing: grayscale;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
