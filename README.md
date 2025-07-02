@@ -6,7 +6,7 @@ This project represents my personal journey in learning modern frontend tools. S
 - [x] 🎨 Tailwind CSS – Utility-first styling
 - [x] 🌼 daisyUI – Beautiful component library for Tailwind
 
-![clerk ui screenshot](./images/clerk-ui-screenshot.webp)
+![clerk ui screenshot](./images/clerk-auth-ui.webp)
 
 ## 📝 Todo
 
